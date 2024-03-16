@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qr_page/qr.dart';
+import 'package:qr_page/reg.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -46,11 +48,25 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           SizedBox(height: 20),
-          TextButton(onPressed: null, child: Text('Login',style: TextStyle(color:Colors.white),),
-          style: TextButton.styleFrom(backgroundColor: Colors.tealAccent),
-            ),
+    TextButton(onPressed: (){
+    Navigator.push(context, MaterialPageRoute(
+    builder: (context) => const  Qr ()),
+      );
+    },
+    style: TextButton.styleFrom(backgroundColor: Colors.red),
+    child: Text('Login',style: TextStyle(color: Colors.white60,fontSize: 20),),),
+        SizedBox(height: 20),
+        TextButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(
+              builder: (context) => const  Reg ()));
+        },
+          style: TextButton.styleFrom(backgroundColor: Colors.red),
+          child: Text('Not login?',style: TextStyle(color: Colors.white60,fontSize: 20),),),
         ],
-      )),
+      ),
+    ),
+
+
     );
   }
 }
