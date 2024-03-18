@@ -15,7 +15,7 @@ class _RegState extends State<Reg> {
   final _nameNoController = TextEditingController();
   final _emailNoController = TextEditingController();
   final _passwordNoController = TextEditingController();
-  bool loading = false;
+
 
 Future<void> register() async {
   Uri uri = Uri.parse('url');
